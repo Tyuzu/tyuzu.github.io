@@ -35,3 +35,23 @@ featured_posts:
     title: 'Featured post #2'
   - url: '#'
     title: 'Featured post #3'
+
+collections:
+  profile:
+    title: Profiles
+    output: true
+  lists:
+    title: Lists
+    output: true
+
+defaults:
+  - scope:
+      type: profile
+    values:
+      title: Profiles
+      permalink: /profile/:title
+  - scope:
+      type: lists
+    values:
+      title: Lists
+      permalink: /lists/:title

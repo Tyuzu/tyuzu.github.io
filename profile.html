@@ -1,20 +1,26 @@
 ---
 layout: default
-title: Home
 ---
 
-{% for post in paginator.posts %}
-<article>
-  <h2>
-    <a href='{{ site.url }}{{ post.url }}' title='{{ post.title }}'>
-      {{ post.title }}
-    </a>
-  </h2>
-  <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>  
-</article>     
-{% endfor %}
-<hr class="stylish"/>
-<center>
+<section>
+    {% for collection in site.collections %}
+      {% if collection.docs.size > 0 and collection.title == "Profiles"%}
+      <section id="posts">
+            <h3 class="home-page-heading">{{ collection.title }}</h3>
+          <div class="parent">
+            {% for post in collection.docs %}
+            <div class="post-wrapper">
+              <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%Y" }}</time>
+              <a class="post-link" href="{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+      </section>
+      {% endif %}
+    {% endfor %}
+  </section>
   {% if paginator.total_pages > 1 %}
     <nav class="pagination">
       {% if paginator.previous_page %}
@@ -36,4 +42,3 @@ title: Home
     {% endif %}
     </nav>
   {% endif %}
-</center>
