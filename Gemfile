@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 
-
-gem "jekyll", "~> 4.1"
+group :jekyll_plugins do
+    gem "jekyll", "~> 4.0"
+end
+gem 'jekyll-sitemap'
 
 gem "jekyll-paginate", "~> 1.1"

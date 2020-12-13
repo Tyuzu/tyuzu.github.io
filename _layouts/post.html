@@ -1,20 +1,25 @@
 ---
-layout: default
+layout: compress
 ---
-<h1>{{ page.title }}{{ page.shortUrl }}</h1>
-<div class='separator'></div>
-        
-{{ content }}
-        
 
-<section class="pagination">
-    {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.url}}">{{page.previous.title}} &raquo;</a>
-    {% endif %}
-    {% if page.next.url %}
-    <a class="next" href="{{page.next.url}}">&laquo; {{page.next.title}}</a>
-    {% endif %}
-  </section>
+{% include head.html %}
 
+    <main>
 
-{% if site.disqus-id %} {% include comments.html %} {% endif %}
+        {% include header.html %}
+
+        <article>
+            <h1>{{ page.title }}</h1>
+            <p class="subtitle">{{ page.date | date: "%b %-d, %Y" }}</p>
+
+            {{ page.content }}
+
+            <hr>
+
+            <p><a href="{{ site.baseurl }}/articles">← Back to all articles</a></p>
+        </article>
+
+    </main>
+
+</body>
+</html>

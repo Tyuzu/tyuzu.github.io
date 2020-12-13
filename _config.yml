@@ -1,57 +1,31 @@
-name: "Livekpop"
-title: "Livekpop"
-description: "Lightweight theme"
-
-url: '' 
-baseurl: ''
+title: Livekpop
+description: Girl Idol profiles and Girl Group profiles.
 
 markdown: kramdown
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-highlighter: rouge
 
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
 
-plugins:
-  - jekyll-paginate
-paginate: 8
-paginate_path: /page-:num
+permalink: pretty
 
-#disqus-id: your-disqus-id
-
-source: .
-destination: ./_site
-
-sass:
-    style: :compressed
-    sass_dir: assets/css/
-
-featured_posts_title: Featured Posts
-featured_posts:
-  - url: '#'
-    title: 'Featured post #1'
-  - url: '#'
-    title: 'Featured post #2'
-  - url: '#'
-    title: 'Featured post #3'
+exclude:
+- README.md
 
 collections:
-  profile:
-    title: Profiles
-    output: true
-  lists:
-    title: Lists
+  news:
+    title: News
+    default_open: false
     output: true
 
 defaults:
   - scope:
-      type: profile
+      type: news
     values:
-      title: Profiles
-      permalink: /profile/:title
-  - scope:
-      type: lists
-    values:
-      title: Lists
-      permalink: /lists/:title
+      title: News
+      permalink: /news/:title

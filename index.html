@@ -1,21 +1,26 @@
 ---
 layout: default
-title: Home
+title: News
 ---
 
-{% for post in paginator.posts %}
-<article>
-  <h2>
-    <a href='{{ site.url }}{{ post.url }}' title='{{ post.title }}'>
-      {{ post.title }}
-    </a>
-  </h2>
-  <p>{{ post.excerpt | strip_html | truncate: 250 }}</p>  
-</article>     
+{% for collection in site.collections %}
+{% if collection.docs.size > 0 and collection.title=="News" %}
+<section id="posts">
+    <div class="parent">
+      {% for post in collection.docs %}
+      <div class="post-wrapper">
+        <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%m/%Y" }}</time>
+        <a class="post-link" href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+</section>
+{% endif %}
 {% endfor %}
-<hr class="stylish"/>
-<center>
-  {% if paginator.total_pages > 1 %}
+
+{% if paginator.total_pages > 1 %}
     <nav class="pagination">
       {% if paginator.previous_page %}
         <a class="paginationLink" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
@@ -36,4 +41,3 @@ title: Home
     {% endif %}
     </nav>
   {% endif %}
-</center>
