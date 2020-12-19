@@ -3,7 +3,7 @@ layout: post
 excerpt_separator: <!--more-->
 title: Banana
 description: A visual breakdown of how to use the ET jekyll theme
-permalink: et-jekyll-theme/
+permalink: a-random-news/
 date: 2018-01-14
 ---
 
