@@ -6,3 +6,5 @@ end
 gem 'jekyll-sitemap'
 
 gem "jekyll-paginate", "~> 1.1"
+
+gem "wdm", "~> 0.1.1"
