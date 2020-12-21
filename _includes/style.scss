@@ -32,7 +32,7 @@ h1,h2,h3,h4,h5,h6 {
     text-transform: capitalize;
 }
 h1 { font-size: 3.2rem; font-style: normal; margin-top: 1rem; }
-h2 { font-size: 2.2rem; margin-top: 2.2rem; }
+h2 { font-size: 2.2rem; margin-bottom: 2.2rem; }
 h3 { font-size: 1.7rem; margin-top: 2.6rem; }
 
 p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
@@ -117,7 +117,7 @@ table {
     $DEFAULT CLASSES
 /**************************************/
 /*p*/.subtitle {
-    font-size: 1.8rem;
+    font-size: 1rem;
     font-style: italic;
 }
 
@@ -208,8 +208,7 @@ figure {
     $NAVIGATION
 /**************************************/
 nav {
-    margin-bottom: 3rem;
-    margin-top: 1rem;
+    margin: 1rem 0 1rem 0;
 
     .menu-icon {
         cursor: pointer;

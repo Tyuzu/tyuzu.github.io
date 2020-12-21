@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: profile
 excerpt_separator: <!--more-->
 title: Chuu Profile
 description: The human vitamin, creator of Chuu Heart, always bubbly Kim Jiwoo

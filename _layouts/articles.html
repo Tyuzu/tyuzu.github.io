@@ -21,27 +21,6 @@ layout: compress
 
     </main>
 
-    {% if site.posts.total_pages > 1 %}
-    <nav class="pagination">
-      {% if site.posts.previous_page %}
-        <a class="paginationLink" href="{{ site.posts.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
-      {% endif %}
-  
-    {% for page in (1..site.posts.total_pages) %}
-      {% if page == site.posts.page %}
-        <em class="paginationLink paginationLinkCurrent">{{ page }}</em>
-      {% elsif page == 1 %}
-        <a class="paginationLink" href="/">{{ page }}</a>
-      {% else %}
-        <a class="paginationLink" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-  
-    {% if site.posts.next_page %}
-      <a class="paginationLink" href="{{ site.posts.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    {% endif %}
-    </nav>
-  {% endif %}
   
     {% include footer.html %}
 
