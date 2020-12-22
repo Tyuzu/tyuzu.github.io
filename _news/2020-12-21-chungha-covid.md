@@ -3,6 +3,6 @@ layout: post
 excerpt_separator: <!--more-->
 title: Chungha Released From COVID-19 Quarantine Facility
 description: Chungha Released From COVID-19 Quarantine Facility
-date: 2018-01-14
+date: 2020-12-21
 ---
 Chungha Released From COVID-19 Quarantine Facility

@@ -8,13 +8,15 @@ layout: compress
 
         {% include header.html %}
 
-        <h2>{{ page.title }}</h2>
+        <h3>{{ page.title }}</h3>
+
+        <hr>
 
         {{ page.content }}
 
         {% for post in site.posts %}
             <article>
-                <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+                <h3 class="arth2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
                 <span class="mini-note">{{ post.parent }}</span>
             </article>
         {% endfor %}

@@ -33,7 +33,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 h1 { font-size: 3.2rem; font-style: normal; margin-top: 1rem; }
 h2 { font-size: 2.2rem; margin-bottom: 2.2rem; }
-h3 { font-size: 1.7rem; margin-top: 2.6rem; }
+h3 { font-size: 1.7rem; }
 
 p,table,blockquote,pre,img,hr,.mini-note,ul li,ol li {
     box-sizing: border-box;
@@ -49,6 +49,7 @@ p {
 
 a,a:visited {
     color: #111;
+    text-decoration: none;
 
     &:hover {
         color: rgb(220, 40, 40);
@@ -79,7 +80,7 @@ hr {
     background: #111;
     border: 0;
     height: 1px;
-    margin: 2rem 0;
+    margin: 1rem 0;
     width: 100%;
 }
 
@@ -254,10 +255,6 @@ nav {
         max-width: 100%;
     }
 
-    .MathJax_SVG_Display {
-        max-width: 100% !important;
-    }
-
     nav {
 
         .menu-icon {
@@ -295,3 +292,16 @@ nav {
     }
 
 }
+
+.arth2{
+    margin-top: 2.6rem;
+}
+.arth2 a {
+    text-decoration: underline;
+}
+.post-list-item {
+    padding: 2rem 0;
+}
+.post-list-item-title{margin-bottom:.3rem;font-size:28.8px;font-weight:600}
+.post-list-item-date{font-size:13.5px}
+.post-list-item-desc{color:#343a40;margin-bottom:.25rem;font-size:1rem}
