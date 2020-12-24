@@ -12,6 +12,7 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
     -webkit-font-smoothing: antialiased;
     background: #fffff8;
@@ -25,7 +26,6 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-style: italic;
     font-weight: normal;
     line-height: 1;
     margin: 0;
@@ -299,7 +299,6 @@ text-align: left;
 font-size: 1.25rem;
 padding: 1rem 0;
 max-width: 700px;
-margin: 0 auto;
 }
 
 .pagination::after {
@@ -310,7 +309,9 @@ display: block
 
 .recpo {
     color: black;
-    font-weight: bold;}
+    font-weight: bold;
+    font-style: normal;
+}
 .pagination a {color: blueviolet;font-weight: bold;}
 .coverimg {width: 100px;float: left;padding: 4px 8px 4px 0px;}
 ::-moz-selection{background:#f7d2d2;color:#333;text-shadow:none}
@@ -318,5 +319,17 @@ display: block
 .sitename {
   color: rgb(102, 70, 2)!important;
   font-size: 3rem;
-  margin: 0rem 0 1rem;
+  margin: 1rem 0 1rem;
+}
+.title-tags {
+    color: #777;
+    font-size: 1.125rem;
+    margin: 10px auto;
+}
+.tags {
+    background-color: #444;
+    color: #fff;
+    padding: 2px 5px;
+    border-radius: 2px;
+    text-decoration: none;
 }
