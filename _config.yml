@@ -17,17 +17,6 @@ paginate: 6
 exclude:
 - README.md
 
-plugins: [jekyll-paginate]
-
-collections:
-  news:
-    title: News
-    default_open: false
-    output: true
-
-defaults:
-  - scope:
-      type: news
-    values:
-      title: News
-      permalink: /news/:title
+plugins: [jekyll-paginate, kramdown]
+# Build settings
+markdown: kramdown

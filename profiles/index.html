@@ -1,36 +1,27 @@
 ---
-layout: archive
-category: "news"
-title: Home
-tagline: "A catchy tagline here"
+layout: page
+title: Profiles
+permalink: /profiles/
+tagline: "Get to know everything your faves here."
+category: "profiles"
 ---
 
-  
-<!--
-{% for post in paginator.posts%}
- 
-<div class="post-list-item">
-    {% if post.link %}
-    <a href="{{ post.link }}">
-    {% else %}
-    <a href="{{ post.url | prepend: site.baseurl }}">
-    {% endif %}
-      <div class="post-list-item-date">
-        <time>{{ post.date | date_to_string }}</time>
-      </div>
-      <div class="post-list-item-title">
-        {{ post.title }}
-      </div>
-      {% if post.description %}
-      <div class="post-list-item-desc">
-        {{ post.description }}
-      </div>
-      {% endif %}
-    </a>
-  </div>
 
-  {% endfor %}
-  {% if paginator.total_pages > 1 %}
+{% for post in site.posts %}
+{% for cat in post.categories %}
+{% if cat == page.category %}
+
+<article>
+    <h3 class="arth2"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+    <span class="mini-note">{{ post.parent }}</span>
+</article>
+
+{% endif %}
+{% endfor %}
+{% endfor %}
+
+
+{% if paginator.total_pages > 1 %}
     <nav class="pagination">
       {% if paginator.previous_page %}
         <a class="paginationLink" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
@@ -51,4 +42,3 @@ tagline: "A catchy tagline here"
     {% endif %}
     </nav>
   {% endif %}
--->

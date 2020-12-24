@@ -48,7 +48,7 @@ p {
 }
 
 a,a:visited {
-    color: #111;
+    color: rgb(50, 67, 219);
     text-decoration: none;
 
     &:hover {
@@ -209,38 +209,13 @@ figure {
     $NAVIGATION
 /**************************************/
 nav {
-    margin: 1rem 0 1rem 0;
-
-    .menu-icon {
-        cursor: pointer;
-        display: none;
-        text-decoration: underline;
-    }
-
-    .menu-btn {
-        display: none;
-    }
-
-    .menu-btn:checked ~ .site-nav {
-        display: block;
-    }
-
-    ul.site-nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-
-        li {
-            display: inline-block;
-            margin: 0 1.5rem 0 0;
-        }
-
-        a,a:visited {
-            text-decoration: none;
-        }
-    }
+    margin: 2rem 0 1rem 0;
 }
 
+nav a {
+    margin: 0.5rem;
+    font-size: 1.3rem;
+}
 /**************************************
     $MEDIA QUERIES - TABLET
 /**************************************/
@@ -293,15 +268,55 @@ nav {
 
 }
 
+.mrg3{
+    margin-top: 3.6rem;
+}
 .arth2{
     margin-top: 2.6rem;
 }
 .arth2 a {
     text-decoration: underline;
 }
-.post-list-item {
-    padding: 2rem 0;
-}
+.post-list-item {padding: 1rem 0;}
 .post-list-item-title{margin-bottom:.3rem;font-size:28.8px;font-weight:600}
 .post-list-item-date{font-size:13.5px}
 .post-list-item-desc{color:#343a40;margin-bottom:.25rem;font-size:1rem}
+
+/*------------rgb(19, 217, 35)----------------*/
+.prev {
+max-width: 50%;
+float: right;
+text-align: right;
+}
+
+.next {
+max-width: 50%;
+float: left;
+text-align: left;
+}
+
+.pagination {
+font-size: 1.25rem;
+padding: 1rem 0;
+max-width: 700px;
+margin: 0 auto;
+}
+
+.pagination::after {
+content: "";
+clear: both;
+display: block
+}
+
+.recpo {
+    color: black;
+    font-weight: bold;}
+.pagination a {color: blueviolet;font-weight: bold;}
+.coverimg {width: 100px;float: left;padding: 4px 8px 4px 0px;}
+::-moz-selection{background:#f7d2d2;color:#333;text-shadow:none}
+::selection{background:#9affc8;color:#000;text-shadow:none}
+.sitename {
+  color: rgb(102, 70, 2)!important;
+  font-size: 3rem;
+  margin: 0rem 0 1rem;
+}

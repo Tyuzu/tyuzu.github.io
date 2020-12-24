@@ -5,6 +5,10 @@ title: Jang Gyuri Profile
 description: Never say Peekaboo, Let's get it, Jang Gyuri
 permalink: fromis_9/gyuri/
 parent: Fromis_9
+categories: ["profiles"]
+tags:
+- fromis_9
+- gyuri
 ---
 
 Jang Gyuri was born on December 27th, 1997 and is a member of the Korean girl group fromis_9.
