@@ -336,15 +336,6 @@ display: block
 
 
 /*------------------*/
-
-
-  main {
-      background: white;
-      border: 2px solid #e9ecef;
-      -webkit-box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
-      box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
-      padding: 2rem 3rem;
-  }
   
   ul, ol {
       padding: 0;
@@ -369,26 +360,7 @@ display: block
       width: 100%;
       margin: 0.5rem 0;
   }
-  
-  nav {
-      ul {
-          list-style: none !important;
-          padding: 0;
-          text-align: right;
-  
-          li {
-              display: inline-block;
-          }
-      }
-      a, a:visited {
-          margin: 0.5rem;
-          text-decoration: none;
-          font-size: 0.875rem;
-          text-transform: uppercase;
-          color: inherit;
-      }
-  }
-  
+
   footer {
       margin: 1rem 0;
       text-align: center;
