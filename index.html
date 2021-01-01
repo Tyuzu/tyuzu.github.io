@@ -1,9 +1,111 @@
 ---
 layout: default
 title: LiveKpop
+hdr: collections
+tagline: Collection of various things
 ---
 
+<hr>
   
+<div class="tagline">
+<span class="page-title">{{page.hdr}}</span> <br/>
+<span class="post-list-item-desc"><em>{{page.tagline}}</em></span>
+</div>
+
+<hr>
+<script type="text/javascript">
+   //<![CDATA[
+   var numfeed = 8;
+   var startfeed = 0;
+   var urlblog = "https://geepdighachcha.blogspot.com";
+   var charac = 190;
+   var urlprevious, urlnext;
+   function myfeed(e,t){for(var n=e.split("<"),r=0;r<n.length;r++)-1!=n[r].indexOf(">")&&(n[r]=n[r].substring(n[r].indexOf(">")+1,n[r].length));return n=n.join(""),n=n.substring(0,t-1)}function showrecentpostsae(e){var t,n,r,a,i,s="";urlprevious="",urlnext="";for(var l=0;l<e.feed.link.length;l++)"previous"==e.feed.link[l].rel&&(urlprevious=e.feed.link[l].href),"next"==e.feed.link[l].rel&&(urlnext=e.feed.link[l].href);for(var d=0;d<numfeed&&d!=e.feed.entry.length;d++){t=e.feed.entry[d],n=t.title.$t;for(var l=0;l<t.link.length;l++)if("alternate"==t.link[l].rel){r=t.link[l].href;break}i="content"in t?t.content.$t:"summary"in t?t.summary.$t:"",a="media$thumbnail"in t?t.media$thumbnail.url:"https://3.bp.blogspot.com/-BHuXHny1kOk/VXrkSyxKCjI/AAAAAAAACas/pZLJAEUDtds/s1600/no-image.png",s+="<div class='recentpostel'>",s+="<div class='post-list-item-title'><a href='"+r+"'>"+n+"</a></div>",s+="<a href='"+r+"' target='_blank'><img class='imigi' src='"+a+"' /></a>",s+="<p>"+myfeed(i,charac)+"...</p></div>",s+="</a>"}document.getElementById("recentpostsae").innerHTML=s,s="",s+=urlprevious?"<a href='javascript:navigasifeed(-1);' class='previous'>Previous</a>":"<span class='noactived previous'>Previous</span>",s+=urlnext?"<a href='javascript:navigasifeed(1);' class='next'>Next</a>":"<span class='noactived next'>Next</span>",s+="<a href='javascript:navigasifeed(0);' class='home'>Home</a>",document.getElementById("recentpostnavfeed").innerHTML=s}function navigasifeed(e){var t,n;-1==e?(t=urlprevious.indexOf("?"),n=urlprevious.substring(t)):1==e?(t=urlnext.indexOf("?"),n=urlnext.substring(t)):n="?start-index=1&max-results="+numfeed+"&orderby=published&alt=json-in-script",n+="&callback=showrecentpostsae",incluirscript(n)}function incluirscript(e){1==startfeed&&removerscript(),document.getElementById("recentpostsae").innerHTML="<div id='recentpostload'></div>",document.getElementById("recentpostnavfeed").innerHTML="";var t=urlblog+"/feeds/posts/default"+e,n=document.createElement("script");n.setAttribute("type","text/javascript"),n.setAttribute("src",t),n.setAttribute("id","mylabel"),document.getElementsByTagName("head")[0].appendChild(n),startfeed=1}function removerscript(){var e=document.getElementById("mylabel"),t=e.parentNode;t.removeChild(e)}onload=function(){navigasifeed(0)};
+   
+   //]]>
+</script>
+        <div id="recentpostsae"></div>
+        <div id="recentpostnavfeed"></div>
+
+<style>
+#recentpostsae {
+margin-top: 8px;
+background: #fff;
+}
+.recentpostel {
+min-height: 45px;
+margin-top: 8px;
+transition: transform .5s;
+padding: 20px 6px;
+}
+.post-list-item-title {
+  font-weight: 400;
+    max-width: 55%;
+}
+.recentpostel p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+.imigi {
+  width: 130px;
+  float: left;
+  margin: 0 0.8rem 0 0;
+}
+  #recentpostload {
+  color: #888;
+  font-family: Tahoma;
+  font-size: 100px;
+  letter-spacing: -10px;
+  text-align: center;
+  text-shadow: -5px 0 1px #444;
+  background: #fff url(https://2.bp.blogspot.com/-60aISBQLRY0/VFBMqzLfzGI/AAAAAAAABgM/GInmVTvEzkc/s1600/loader.gif) no-repeat 50% 50%;
+  height: 470px;
+  }
+  #recentpostnavfeed {
+  border-top: 1px solid #ddd;
+  color: #bbb;
+  text-align: center;
+  margin-top: 20px;
+  }
+  #recentpostnavfeed:hover {
+  background-color: #fefefe;
+  }
+  #recentpostnavfeed a {
+  color: #141414!important;
+  display: block;
+  padding: 5px 10px;
+  }
+  #recentpostnavfeed span {
+  padding: 5px 10px;
+  }
+  #recentpostnavfeed .next {
+  float: right;
+  font-weight: bold;
+  font-size: 20px;
+  }
+  #recentpostnavfeed .previous {
+  float: left;
+  font-weight: bold;
+  font-size: 20px;
+  }
+  #recentpostnavfeed .home {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  }
+  #recentpostnavfeed a:hover,
+  #recentpostnavfeed span.noactived {
+  color: transparant!important;
+  }
+</style>
+
+
+
+
+
+
+<!--
+{% comment %}
 {% for post in paginator.posts%}
  
 <div class="post-list-item">
@@ -27,6 +129,7 @@ title: LiveKpop
   </div>
 
   {% endfor %}
+
   {% if paginator.total_pages > 1 %}
     <nav class="pagination">
       {% if paginator.previous_page %}
@@ -48,3 +151,6 @@ title: LiveKpop
     {% endif %}
     </nav>
   {% endif %}
+
+  {% endcomment %}
+-->
